@@ -3,3 +3,14 @@
 .card {
     height: 100%;
 }
+
+.navbar-item {
+    > li {
+        color: black;
+    }
+}
+
+.hero {
+    background-image: url('img/IMG_3136.jpg');
+    background-size: cover;
+}

@@ -7760,3 +7760,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .card {
   height: 100%; }
+
+.navbar-item > li {
+  color: black; }
+
+.hero {
+  background-image: url("img/IMG_3136.jpg");
+  background-size: cover; }
+  .hero title {
+    color: antiquewhite; }

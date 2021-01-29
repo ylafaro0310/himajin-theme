@@ -1,6 +1,21 @@
 <?php
 get_header();
 ?>
+<header>
+    <?php get_template_part('template-parts/header/site-branding') ?>
+</header>
+<section class="hero mb-4 is-medium is-fullheight is-info">
+  <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title">
+            <?php bloginfo('name'); ?>
+        </p>
+        <p class="subtitle">
+            <?php bloginfo('description'); ?>
+        </p>
+    </div>
+  </div>
+</section>
 <div class="container">
     <div class="columns is-multiline">
     <?php
@@ -9,6 +24,7 @@ get_header();
                 the_post();
                 get_template_part('template-parts/content/content');
             }
+            himajin_pagination();
         } else {
             get_template_part('template-parts/content/content-none');
         }
