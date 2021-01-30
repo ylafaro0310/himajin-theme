@@ -76,18 +76,17 @@ add_action( 'pre_get_posts', 'himajin_limit_posts' );
 // Get category
 function himajin_get_category(){
   $category = get_the_category(); 
-  
   $cat = array_search('プログラミング',array_column($category,'cat_name'));
-  if($cat) $ret = "<p class='cat-blue'>".$category[$cat]->cat_name."</p>";
+  if($cat !== false) $ret = "<p class='cat-blue'>".$category[$cat]->cat_name."</p>";
 
   $cat = array_search('読書',array_column($category,'cat_name'));
-  if($cat) $ret = "<p class='cat-green'>".$category[$cat]->cat_name."</p>";
-
-  $cat = array_search('アニメ',array_column($category,'cat_name'));
-  if($cat) $ret = "<p class='cat-green'>".$category[$cat]->cat_name."</p>";
+  if($cat !== false) $ret = "<p class='cat-green'>".$category[$cat]->cat_name."</p>";
 
   $cat = array_search('音楽',array_column($category,'cat_name'));
-  if($cat) $ret = "<p class='cat-green'>".$category[$cat]->cat_name."</p>";
+  if($cat !== false) $ret = "<p class='cat-green'>".$category[$cat]->cat_name."</p>";
+
+  $cat = array_search('アニメ',array_column($category,'cat_name'));
+  if($cat !== false) $ret = "<p class='cat-green'>".$category[$cat]->cat_name."</p>";
 
   if(empty($ret)) $ret = "<p class='cat-black'>".$category[0]->cat_name."</p>";
   echo $ret;
