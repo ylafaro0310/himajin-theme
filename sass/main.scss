@@ -1,7 +1,32 @@
 @import "../node_modules/bulma/bulma.sass";
 
+a {
+    color: black;
+}
+
 .card {
     height: 100%;
+}
+
+.card-image {
+    p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        padding: 2px 10px 2px 10px;
+    }
+    p.cat-green {
+        background-color: darkseagreen;
+    }
+    p.cat-blue {
+        background-color: cadetblue;
+    }
+    p.cat-black {
+        background-color: darkslategray;
+    }
+
+    position: relative;
 }
 
 .navbar-item {
