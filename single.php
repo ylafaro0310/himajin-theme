@@ -30,6 +30,12 @@ get_header();
             }
         ?>
         </div>
+        <div class="columns is-multiline is-centered">
+        <?php
+            if ( comments_open() || get_comments_number() ) {
+                comments_template();
+            }
+        ?>
     </div>
 </section>
 <?php
