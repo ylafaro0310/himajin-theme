@@ -1,4 +1,4 @@
-    <aside class='container mt-4'>
+    <aside class='section container mt-4'>
         <ul class='columns'><?php 
             ob_start();
             dynamic_sidebar('footer');
